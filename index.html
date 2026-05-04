@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VisionLab Space</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7fb;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #031233;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: white;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 16px;
+            background-color: white;
+            color: #031233;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #dbeafe;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0c0a3c, #031233);
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+            text-align: left;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .hero p {
+            color: #dbeafe;
+            max-width: 700px;
+            margin: 0 0 20px 0;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .hero-image-box {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 24px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+            object-fit: contain;
+        }
+
+        section {
+            padding: 30px 20px;
+        }
+
+        h2, h3 {
+            color: #171e30;
+        }
+
+        .card h2,
+        .card h3 {
+            margin-top: 0;
+        }
+
+        p {
+            color: #5d7ead;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .info-button {
+            display: inline-block;
+            padding: 12px 18px;
+            background-color: #0e0a3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .info-button:hover {
+            background-color: #222d50;
+        }
+
+        .info-button:active {
+            transform: scale(0.95);
+        }
+
+        footer {
+            background-color: #031233;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                max-width: 90%;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px auto;
+                width: 150px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                margin: 0 auto 20px;
+            }
+
+            .hero-logo {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>VISIONLAB</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#introduction">Introduction</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Welcome to VisionLab</h2>
+                <p id="intro-text">
+                    A group of students interested in various computer science fields,
+                    including ML and AI, who enjoy challenging themselves through projects.
+                </p>
+
+                <button onclick="changeText()" class="info-button">
+                    Change Text
+                </button>
+
+                <button onclick="showMessage()" class="info-button">
+                    Click Me
+                </button>
+
+                <button onclick="changeHeroColor()" class="info-button">
+                    Change Color
+                </button>
+
+                <button onclick="toggleAboutCard()" class="info-button">
+                    Hide About
+                </button>
+                <p id="message"></p>
+            </div>
+
+            <div class="hero-image-box">
+                <img src="images/logo.png" alt="VisionLab Logo" class="hero-logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="card" id="about-card">
+            <h2>About</h2>
+            <p>
+                VisionLab is a student-led project focused on exploring computer science fields.
+                Our goal is to build a clean and structured website that presents our project process,
+                results, and team members.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="card" id="project">
+                <h3>Project</h3>
+                <div class="button-group">
+                    <a class="info-button" href="result.html">Result</a>
+                    <a class="info-button" href="process.html">Process</a>
+                    <a class="info-button" href="history.html">History</a>
+                    <a class="info-button" href="https://github.com/OpenVisionLab" target="_blank">
+                        GitHub Repository
+                    </a>
+                </div>
+            </div>
+
+            <div class="card" id="introduction">
+                <h3>Introduce Our Group</h3>
+                <div class="button-group">
+                    <a class="info-button" href="woojin.html">WooJin Kim</a>
+                    <a class="info-button" href="siwon.html">SiWon Park</a>
+                    <a class="info-button" href="haeyun.html">HaeYun Jung</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 VisionLab. All rights reserved.</p>
+    </footer>
+
+    <script>
+    function showMessage() {
+        document.getElementById("message").innerHTML = "Welcome to VisionLab!";
+    }
+    function changeText() {
+        document.getElementById("intro-text").innerHTML =
+        "We also explore Web Development, Data Science, and real-world projects!";
+    }
+    
+    let isChanged = false;
+    
+    function changeHeroColor() {
+        const hero = document.getElementById("hero-section");
+        
+        if (isChanged === false) {
+            hero.style.background = "linear-gradient(135deg, #064e3b, #022c22)";
+            isChanged = true;
+        } else {
+            hero.style.background = "linear-gradient(135deg, #0c0a3c, #031233)";
+            isChanged = false;
+        }
+    }
+    
+    function changeHeroColor() {
+        const hero = document.getElementById("hero-section");
+        const button = event.target;
+        
+        if (isChanged === false) {
+            hero.style.background = "linear-gradient(135deg, #064e3b, #022c22)";
+            button.innerText = "Reset Color";
+            isChanged = true;
+        } else {
+            hero.style.background = "linear-gradient(135deg, #0c0a3c, #031233)";
+            button.innerText = "Change Color";
+            isChanged = false;
+        }
+    }
+
+    let isAboutVisible = true;
+    
+    function toggleAboutCard() {
+        const aboutCard = document.getElementById("about-card");
+        const button = event.target;
+        
+        if (isAboutVisible === true) {
+            aboutCard.style.display = "none";
+            button.innerText = "Show About";
+            isAboutVisible = false;
+        } else {
+            aboutCard.style.display = "block";
+            button.innerText = "Hide About";
+            isAboutVisible = true;
+        }
+    }
+    </script>
+
+</body>
+</html>
