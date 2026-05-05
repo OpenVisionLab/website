@@ -28,6 +28,16 @@
             margin: 0;
             color: white;
         }
+        
+        .site-title {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .site-title h1 {
+            margin: 0;
+            color: white;
+        }
 
         nav {
             margin-top: 15px;
@@ -101,13 +111,6 @@
             padding: 20px;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
             object-fit: contain;
-
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        
-        .hero-logo:hover {
-            transform: scale(1.05);
         }
 
         section {
@@ -236,6 +239,7 @@
 <body>
 
     <header>
+        <a href="index.html" class="site-title"></a>
         <h1>VISIONLAB</h1>
         <nav>
             <a href="#about">About</a>
@@ -272,9 +276,9 @@
             </div>
 
             <div class="hero-image-box">
-                <a href = "index.html">
+               
                 <img src="images/logo.png" alt="VisionLab Logo" class="hero-logo">
-                </a>
+                
             </div>
         </div>
     </section>
